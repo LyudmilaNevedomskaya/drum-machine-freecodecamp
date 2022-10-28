@@ -4,12 +4,16 @@ import soundsOne from './utils/soundsOne';
 import soundsTwo from './utils/soundsTwo';
 
 function App() {
-  console.log('soundsOne', soundsOne);
-  console.log('soundsTwo', soundsTwo);
-  
+
+  function playSound(el) {
+    const audio = document.getElementById(el);
+    audio.currentTime = 0;
+    audio.play();
+  }
+
   return (
     <div id="drum-machine">
-      <Keyboard />
+      <Keyboard playSound={playSound}/>
     </div>
   );
 }
