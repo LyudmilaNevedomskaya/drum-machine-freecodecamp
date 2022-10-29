@@ -1,4 +1,5 @@
 import './App.css';
+import ChangeSounds from './components/ChangeSounds';
 import GetSound from './components/GetSound';
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
       <div className="drum-pad-container">
       <GetSound playSound={playSound}/>
       </div>
-      <div className="control-container"></div>
+      <div className="control-container">
+        <ChangeSounds />
+      </div>
     </div>
   );
 }

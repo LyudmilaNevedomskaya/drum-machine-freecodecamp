@@ -1,5 +1,10 @@
 * {box-sizing: border-box;}
 
+body {
+  background-color: #00131f;
+background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+}
+
 .container {
   width: 60%;
   margin: auto;
@@ -7,6 +12,8 @@
   border: 2px solid black;
   display: flex;
   flex-wrap: wrap-reverse;
+  background-color: rgb(163, 162, 161);
+  border-radius: 5px;
 }
 .drum-pad-container {
   flex: 1;
