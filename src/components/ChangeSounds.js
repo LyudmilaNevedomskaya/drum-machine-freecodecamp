@@ -8,6 +8,7 @@ export default function ChangeSounds(props) {
 
   function toggle() {
     setIsActive(!isActive);
+    props.changeSound();
   }
 
   console.log('state', isActive)

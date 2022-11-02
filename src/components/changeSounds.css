@@ -26,6 +26,7 @@
   width: 6.75rem;
   transition: color 0.3s;
   margin: 20px auto;
+  cursor: pointer;
 }
 .SlideBtn:focus {
   outline: 0;
