@@ -4,6 +4,7 @@ import ChangeSounds from './components/ChangeSounds';
 import Display from "./components/Display";
 import GetSound from './components/GetSound';
 import Power from "./components/Power";
+import Volume from "./components/Volume";
 
 import soundsOne from "./utils/soundsOne";
 import soundsTwo from "./utils/soundsTwo"
@@ -19,6 +20,7 @@ function App() {
   const [sounds, setSounds] = useState(soundsGroup[soundType]);
   const [displaySoundName, setDisplaySoundName] = useState(soundType);
   const [power, setPower] = useState(true)
+  const [volume, setVolume] = useState(1)
 
   function playSound(el) {
     if(power) {
@@ -53,14 +55,32 @@ function App() {
     setPower(!power);
   }
 
+  function volumeChange(e) {
+    setVolume(e.target.value);
+    const displayVolume = Math.round(e.target.value * 100);
+    //console.log(displayVolume);
+    setDisplaySoundName('Volume: ' + displayVolume)
+  }
+
+  function controlVolume() {
+    const medias = sounds.map(sound => document.getElementById(sound.key));
+    medias.forEach(media => {
+      if (media) {
+        media.volume = volume;
+      }
+    })
+  }
+
   return (
     <div id="drum-machine" className="container">
+      {controlVolume()}
       <div className="drum-pad-container">
         <GetSound playSound={playSound} sounds={sounds} />
       </div>
       <div className="control-container">
         <Power power={changePower}/>
         <Display displayName={displaySoundName} />
+        <Volume volume={volume} volumeChange={volumeChange}/>
         <ChangeSounds changeSound={changeSound} />
       </div>
     </div>
