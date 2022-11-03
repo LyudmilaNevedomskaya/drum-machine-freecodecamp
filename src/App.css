@@ -21,7 +21,8 @@ font-family: 'Roboto', sans-serif;
 .drum-pad-container {
   flex: 1;
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 33% 33% 33%;
+  justify-items: center;
 }
 .drum-pad {
   padding: 10px;
@@ -45,4 +46,15 @@ font-family: 'Roboto', sans-serif;
 }
 .control-container {
   flex: 1;
+  min-width: 200px;
+}
+.display-name {
+  background: #313130;
+  color: aliceblue;
+  padding: 10px;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  width: 80%;
+  margin: auto;
 }

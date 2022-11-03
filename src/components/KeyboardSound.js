@@ -11,7 +11,7 @@ export default function KeyboardSound(props) {
   }, []);
 
   return (
-    <button className="drum-pad" onClick={() => props.playSound(props.sound.key)}>
+    <button className="drum-pad" id={props.sound.keyCode} onClick={() => props.playSound(props.sound.key)}>
       <audio
         src={props.sound.url}
         id={props.sound.key}

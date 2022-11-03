@@ -11,7 +11,6 @@ export default function ChangeSounds(props) {
     props.changeSound();
   }
 
-  console.log('state', isActive)
   return (
     <button className={'SlideBtn ' + activeCls} onClick={toggle}>
       <span className="SlideBtn-label visuallyhidden">{activeTxt}</span>
