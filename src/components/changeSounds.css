@@ -16,14 +16,15 @@
 
 .SlideBtn {
   box-sizing: border-box;
-  border-radius: 4.6875rem;
-  border: solid 0.3125rem;
+  /* border-radius: 4.6875rem; */
+  border: solid 5px;
   background-color: #313130;
-  color: #b95951;
+  /* color: #b95951; */
+  color: #3e6e6a;
   display: block;
   height: 3.375rem;
   position: relative;
-  width: 6.75rem;
+  width: 5.75rem;
   transition: color 0.3s;
   margin: 20px auto;
   cursor: pointer;
@@ -42,13 +43,14 @@
   position: absolute;
   height: 2.125rem;
   width: 2.125rem;
-  background: linear-gradient(180deg, #4b4a49, #313130);
+  /* background: linear-gradient(180deg, #4b4a49, #313130); */
+  background: #3e6e6a;
   top: 0.3125rem;
   left: 0.3125rem;
   border: solid 0.3125rem;
-  border-radius: 4.375rem;
+  /* border-radius: 4.375rem; */
   transition: left 0.3s;
 }
 .is-active > .SlideBtn-knob {
-  left: 3.6875rem;
+  left: 2.6875rem;
 }
