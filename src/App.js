@@ -23,7 +23,7 @@ function App() {
   const [volume, setVolume] = useState(1)
 
   function playSound(el) {
-    if(power) {
+    if (power) {
       const audio = document.getElementById(el);
       audio.currentTime = 0;
       audio.play();
@@ -72,17 +72,21 @@ function App() {
   }
 
   return (
-    <div id="drum-machine" className="container">
-      {controlVolume()}
-      <div className="drum-pad-container">
-        <GetSound playSound={playSound} sounds={sounds} />
+    <div className="wrapper">
+      <h1>Drum Machine</h1>
+      <div id="drum-machine" className="container">
+        {controlVolume()}
+        <div className="drum-pad-container">
+          <GetSound playSound={playSound} sounds={sounds} />
+        </div>
+        <div className="control-container">
+          <Power power={changePower} />
+          <Display displayName={displaySoundName} />
+          <Volume volume={volume} volumeChange={volumeChange} />
+          <ChangeSounds changeSound={changeSound} />
+        </div>
       </div>
-      <div className="control-container">
-        <Power power={changePower}/>
-        <Display displayName={displaySoundName} />
-        <Volume volume={volume} volumeChange={volumeChange}/>
-        <ChangeSounds changeSound={changeSound} />
-      </div>
+      <p>made by Mila</p>
     </div>
   );
 }
